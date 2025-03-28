@@ -2,23 +2,23 @@ import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link, } from "react-router-dom";
 import "./styles.css";
 import Footer from "./Footer";
-import AuthForm from "./AuthForm";
+// import AuthForm from "./AuthForm";
 import PlatForm from "./assets/platform.mp4"
-import Guide from "./assets/guide.mp4"
+// import Redeem from "./assets/redeem.mp4"
 import Webinar from "./assets/webinar.webp"
-import Redeem from "./assets/redeem.mp4"
+// import Guide from "./assets/guide.mp4"
 import Customer from "./assets/customer.webp"
 import Explainer from "./assets/explainer.webp" 
-import jcrewImg from "./assets/jcrew.jpeg";
-import Web from "./assets/web.webp"
-import harrysImg from "./assets/harrys.png";
-import experianImg from "./assets/experian.png";
-import faireImg from "./assets/faire.png";
-import vistaprintImg from "./assets/vistaprint.png";
-//import aloyogaImg from "./assets/aloyoga.png";//
-//import afterpayImg from "./assets/afterpay.png";//
-//import fableticsImg from "/src/assets/fabletics.png";//
-//import vimeoImg from "./assets/vimeo.png";//
+// import jcrewImg from "./assets/jcrew.jpeg";
+import Web from "./assets/guide.webp"
+import harrysImg from "./assets/harrys.svg";
+import experianImg from "./assets/experian.svg";
+import faireImg from "./assets/faire.svg";
+import vistaprintImg from "./assets/vistaprint.svg";
+import aloyogaImg from "./assets/aloyoga.webp";
+import afterpayImg from "./assets/afterpay.webp";
+import fableticsImg from "/src/assets/fabletics.svg";
+import vimeoImg from "./assets/vimeo.svg";
 
 //import { label, text, title } from "framer-motion/client";//
 export default function BuilderIOClone() {
@@ -145,11 +145,11 @@ function AppContent() {
       ],
     },
     
-    {
-      key: "pricing",
-      label: "Pricing",
-    },
-
+  //  {
+  //     key: "pricing",
+  //     label: "Pricing",
+  //   },
+ 
     {
       key: "resources",
       label: "Resources",
@@ -231,7 +231,6 @@ function AppContent() {
         <div className="btn-group">
           <button 
             className="btn btn-sales" 
-            onClick={() => { setShowForm(true); setIsLogin(true); }}
           >
             Contact Sales
           </button>
@@ -282,16 +281,20 @@ function AppContent() {
         <div className="scrolling-brands">
           <div className="brands">
             {[
-              { src: jcrewImg, alt: "JCREW", label: "JCREW" },
-              { src: harrysImg, alt: "Harry's", label: "Harry's" },
-              { src: experianImg, alt: "Experian", label: "Experian" },
-              { src: faireImg, alt: "Faire", label: "Faire" },
-              { src: vistaprintImg, alt: "Vistaprint", label: "Vistaprint" },
-             // { src: aloyogaImg, alt: "Aloyoga", label: "Aloyoga" },//
-              //{ src: afterpayImg, alt: "Afterpay", label: "Afterpay" },//
-              //{ src: fableticsImg, alt: "Fabletics", label: "Fabletics" },//
-              //{ src: vimeoImg, alt: "Vimeo", label: "Vimeo" },//
+              // { src: jcrewImg, alt: "J.CREW", label: "J.CREW" },
+              { src: harrysImg, alt: "Harry's", label: "HARRY'S" },
+              { src: experianImg, alt: "serasa experian", label: "serasa experian" },
+              { src: faireImg, alt: "FAIRE", label: "FAIRE" },
+              { src: vistaprintImg, alt: "Vistaprint", label: "vistaprint" },
+              { src: aloyogaImg, alt: "aloyoga", label: "aloyoga" },
+            { src: afterpayImg, alt: "afterpay", label: "Afterpay" },
+              { src: fableticsImg, alt: "FABLETICS", label: "Fabletics" },
+              { src: vimeoImg, alt: "vimeo", label: "Vimeo" },
              // { src: nutsImg, alt: "Nuts.com", label: "Nuts.com" },//
+            //  { src: everlane, alt: "EVERLANE", label: "EVERLANE" },
+            //  { src: _zapier, alt: "_zapier", label: "_zapier" },
+
+    
             ].map((brand, index) => (
               <div key={index} className="brand">
                 <img src={brand.src} alt={brand.alt} />
@@ -304,19 +307,7 @@ function AppContent() {
       <section className="visual-dev-section">
   <h5>VISUAL DEVELOPMENT PLATFORM</h5>
   <p>Code, create, iterate, and optimize faster than you thought possible</p>
-  
-  <div className="video-container">
-    <video
-      className="feature-video"
-      src={Guide}
-      autoPlay
-      muted
-      loop
-      controls
-    ></video>
-  </div>
 </section>
-
       <section className="cards-section">
         <h4>Resources</h4>
   <h2>Learn about the future of digital experience delivery</h2>
@@ -343,17 +334,6 @@ function AppContent() {
     </div>
   </div>
 </section>
-<div className="video-container">
-    <video
-      className="feature-video"
-      src={Redeem}
-      autoPlay
-      loop
-      muted
-      controls
-    ></video>
-  </div>
-      
       <section className="newsletter-section">
         <div className="newsletter-container">
         <h2>Get the latest from Builder.io</h2>

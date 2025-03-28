@@ -1,13 +1,13 @@
 import React from "react";
-import "./foot.css";
-// import { title } from "framer-motion/client";
+import "../src/Footer.css";
+import { title } from "framer-motion/client";
 
 const Footer = () => {
   return (
-    <footer className="footer" >
+    <footer className="footer">
       <div className="footer-section">
         {[
-      {
+          {
             title: "PRODUCT",
             items: [
               "Platform Overview",
@@ -106,18 +106,20 @@ const Footer = () => {
               "See All",
             ]
           }
+
         ].map((section, index) => (
           <div key={index} className="footer-column">
             <h4 className="heading">{section.title}</h4>
             <ul>
-                {section.items.map((item, idx) => (
-                    <li key={idx}>{item}</li>
-                ))}
+              {section.items.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
             </ul>
-            </div>
+          </div>
         ))}
-        <div>
-        <div className="footer-bottom">
+      </div>
+
+      <div className="footer-bottom">
         <p>© 2025 Builder.io, Inc.</p>
         <ul className="footer-links">
           
@@ -136,9 +138,8 @@ const Footer = () => {
           <i className="feed-icon"></i>
         </div>
       </div>
-      </div>
-      </div>
     </footer>
   );
 };
+
 export default Footer;
